@@ -20,7 +20,7 @@
       <td><%= student.first_name %></td>
       <td><%= student.last_name %></td>
       <td><%= student.profile_pic_url %></td>
-  
+
       <td><%= link_to 'Show', student_url(student) %></td>
       <td><%= link_to 'Edit', edit_student_url(student) %></td>
       <td><%= link_to 'Destroy', student_url(student), method: 'delete', data: { confirm: "Do you really want to delete this student?" } %></td>

@@ -16,7 +16,7 @@ class StudentsController < ApplicationController
     @student.first_name = params[:first_name]
     @student.last_name = params[:last_name]
     @student.profile_pic_url = params[:profile_pic_url]
-    
+
     if @student.save
       redirect_to students_url
     else
@@ -33,7 +33,7 @@ class StudentsController < ApplicationController
     @student.first_name = params[:first_name]
     @student.last_name = params[:last_name]
     @student.profile_pic_url = params[:profile_pic_url]
-    
+
     if @student.save
       redirect_to students_url
     else

@@ -16,3 +16,7 @@
 </p>
 
 
+<% @students.each do |student| %>
+<%= link_to 'Show', student_url(student) %>
+<%= link_to 'Edit', edit_student_url(student) %>
+<%= link_to 'Destroy', student_url(student), method: 'delete', data: { confirm: "Do you really want to delete this student?" } %>

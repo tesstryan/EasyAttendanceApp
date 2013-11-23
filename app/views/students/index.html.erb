@@ -1,16 +1,44 @@
 
-<div class="container">
-  <div class="new_student_style">
-    <h1>Web Development Course</h1>
-    <div class="row">
-          <% @students.each do |student| %>
-            <div class="col-sm-3 col-md-2 col-xs-6" >
-            <%= image_tag student.profile_pic_url, :class => "img-circle", width: 150 %><br>
-           <%= student.first_name %> <%= student.last_name %>
-           </div>
-         <% end %>
+  <script>
+     $(document).ready(function() {
+        alert("The page is ready!");
+        var count = 0;
+        $( ".student" ).each(function() {
+          var $student = $( this );
+          var count = 0;
+          $student.click(function() {
+            count++;
+            $student.toggleClass( "sepia", count === 1);
+            $student.toggleClass( "blackwhite", count === 2);
+          });
+
+          });
+        });
+  </script>
+
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="new_student_style">
+      <h1>Web Development Course</h1>
+      <%= button_tag "I'm Done! Submit to Spreadsheet", :class => 'btn btn-warning' %>
+      <br><br>
+      <div class="row">
+            <% @students.each do |student| %>
+              <div class="col-sm-3 col-md-2 col-xs-6" >
+              <!-- <input type="checkbox" id="checkbox"> -->
+              <label for="checkbox"><%= image_tag student.profile_pic_url, :class => "circular student"%></label>
+             <span id="name"><%= student.first_name %> <%= student.last_name %></span>
+             </div>
+           <% end %>
+      </div>
     </div>
+
+
+
   </div>
 
 
-</div>
+

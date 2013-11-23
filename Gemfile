@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'jquery-rails'
+gem 'fancybox-rails'
+
 gem 'starter_generators'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

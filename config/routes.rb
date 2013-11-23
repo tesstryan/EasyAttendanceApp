@@ -1,5 +1,7 @@
 EasyAttendanceApp::Application.routes.draw do
   # Routes for the Student resource:
+
+  get '/results', controller: 'students', action: 'results'
   # CREATE
   get '/students/new', controller: 'students', action: 'new', :as => 'new_student'
   post '/students', controller: 'students', action: 'create'

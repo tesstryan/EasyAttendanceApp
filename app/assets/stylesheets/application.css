@@ -11,3 +11,11 @@
  *= require_self
  *= require_tree .
  */
+
+
+
+.new_student_style {
+  text-decoration: none;
+  text-align: center;
+  padding-bottom: 30px;
+}
